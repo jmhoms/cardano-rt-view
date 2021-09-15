@@ -37,45 +37,22 @@
             "remoteAddr": {
                 "tag": "RemoteSocket",
                 "contents": [
-                "0.0.0.0",
-                "3003"
-            ]
-        },
-        "nodeName": "node-3"
-    }
-],
-"defaultScribes": [
-    [
-        "StdoutSK",
-        "stdout"
+                    "0.0.0.0",
+                    "3003"
+                ]
+            },
+            "nodeName": "node-3"
+        }
     ],
-    [
-        "FileSK",
-        "/data/logs/cardano-rt-view.log"
-    ]
-],
-"options": {
-    "mapBackends": {
-        "cardano-rt-view.acceptor": [
-            "LogBufferBK",
-            {
-                "kind": "UserDefinedBK",
-                "name": "ErrorBufferBK"
-            }
+    "defaultScribes": [
+        [
+            "StdoutSK",
+            "stdout"
+        ],
+        [
+            "FileSK",
+            "/root/.local/share/cardano-rt-view-logs/cardano-rt-view.log"
         ]
-    }
-},
-"setupScribes": [
-    {
-        "scMaxSev": "Emergency",
-        "scName": "stdout",
-        "scRotation": null,
-        "scMinSev": "Notice",
-        "scKind": "StdoutSK",
-        "scFormat": "ScText",
-        "scPrivacy": "ScPublic"
-    },
-    {
     ],
     "options": {
         "mapBackends": {
@@ -100,7 +77,7 @@
         },
         {
             "scMaxSev": "Emergency",
-            "scName": "/data/logs/cardano-rt-view.log",
+            "scName": "/root/.local/share/cardano-rt-view-logs/cardano-rt-view.log",
             "scRotation": {
                 "rpLogLimitBytes": 50000,
                 "rpKeepFilesNum": 10,
